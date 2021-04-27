@@ -608,7 +608,7 @@ abstract class AnnisaBuilder implements Form
 	{     
 		return call_user_func_array(
 			[$this->builder, array_get($row, 'type', 'text')], 
-			array_except($row, 'type')
+			array_values(array_except($row, 'type'))
 		);
 	}
 
